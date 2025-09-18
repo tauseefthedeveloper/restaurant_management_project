@@ -1,7 +1,7 @@
-PENDING="Pending"
-PROCESSING="Processing"
-COMPLETED="Completed"
-CANCELLED="Cancelled"
+PENDING = "Pending"
+PROCESSING = "Processing"
+COMPLETED = "Completed"
+CANCELLED = "Cancelled"
 
 ORDER_STATUSES = [
     PENDING,
