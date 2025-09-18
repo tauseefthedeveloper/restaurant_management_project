@@ -7,10 +7,10 @@ def generate_coupon_code(length=10,max_attempts=1000):
     
     #Generate a coupon code that is unique
     alphabet = string.ascii_uppercase + string.digits # A to Z and 0 to 9
-    for attemts in range(max_attempts):
+    for attempts in range(max_attempts):
         #Generate a unique code
         coupon_code = ''.join(secrets.choice(alphabet) for _ in range(length)) #e.g. XYZ1B2E65F
-        #Check exits in DB or not
+        #Check exists in Database or not
         if not Coupon.objects.filter(code=coupon_code).exists():
             return coupon_code
     
