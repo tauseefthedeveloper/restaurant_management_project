@@ -1,6 +1,6 @@
 import secrets
 import string
-from orders.model import Coupon
+from orders.models import Coupon
 
 def generate_coupon_code(length=10):
     
@@ -10,5 +10,5 @@ def generate_coupon_code(length=10):
         #Generate a unique code
         code=''.join(secrets.choice(alphabet) for _ in range(length))
         #Check exits in DB or not
-        if not Coupon.objects.filter(code==code).exits():
+        if not Coupon.objects.filter(code=code).exits():
             return code
